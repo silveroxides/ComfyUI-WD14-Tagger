@@ -11,6 +11,7 @@
 	},
 	"models": {
 		"wd-eva02-large-tagger-v3": "{HF_ENDPOINT}/SmilingWolf/wd-eva02-large-tagger-v3",
+		"wd-vit-large-tagger-v3": "{HF_ENDPOINT}/SmilingWolf/wd-vit-large-tagger-v3",
 		"wd-vit-tagger-v3": "{HF_ENDPOINT}/SmilingWolf/wd-vit-tagger-v3",
 		"wd-swinv2-tagger-v3": "{HF_ENDPOINT}/SmilingWolf/wd-swinv2-tagger-v3",
 		"wd-convnext-tagger-v3": "{HF_ENDPOINT}/SmilingWolf/wd-convnext-tagger-v3",
@@ -20,6 +21,11 @@
 		"wd-v1-4-convnext-tagger": "{HF_ENDPOINT}/SmilingWolf/wd-v1-4-convnext-tagger",
 		"wd-v1-4-vit-tagger-v2": "{HF_ENDPOINT}/SmilingWolf/wd-v1-4-vit-tagger-v2",
 		"wd-v1-4-swinv2-tagger-v2": "{HF_ENDPOINT}/SmilingWolf/wd-v1-4-swinv2-tagger-v2",
-		"wd-v1-4-vit-tagger": "{HF_ENDPOINT}/SmilingWolf/wd-v1-4-vit-tagger"
+		"wd-v1-4-vit-tagger": "{HF_ENDPOINT}/SmilingWolf/wd-v1-4-vit-tagger",
+		"idolsankaku-eva02-large-tagger-v1": "{HF_ENDPOINT}/deepghs/idolsankaku-eva02-large-tagger-v1",
+		"idolsankaku-swinv2-tagger-v1": "{HF_ENDPOINT}/deepghs/idolsankaku-swinv2-tagger-v1",
+		"Z3D-E621-Convnext": "{HF_ENDPOINT}/silveroxides/Z3D-E621-Convnext",
+		"RedRocket-JointTagger-v2": "{HF_ENDPOINT}/silveroxides/JTP_PILOT2-onnx",
+		"Thouph-experimental-efficientnet-v2": "{HF_ENDPOINT}/silveroxides/Thouph-experimental_efficientnetv2_m_8035"
 	}
 }

@@ -57,7 +57,9 @@ async def tag(image, model_name, threshold=0.35, character_threshold=0.85, exclu
     name = os.path.join(models_dir, model_name + ".onnx")
     model = InferenceSession(name, providers=defaults["ortProviders"])
 
+    inputs = model.get_inputs()
     input = model.get_inputs()[0]
+    print(input)
     height = input.shape[1]
 
     # Reduce to max size and pad with white
@@ -79,15 +81,19 @@ async def tag(image, model_name, threshold=0.35, character_threshold=0.85, exclu
         reader = csv.reader(f)
         next(reader)
         for row in reader:
-            if general_index is None and row[2] == "0":
-                general_index = reader.line_num - 2
-            elif character_index is None and row[2] == "4":
-                character_index = reader.line_num - 2
+            if general_index is None:
+                if row[2] == "0" or row[2] == "8":
+                    general_index = reader.line_num - 2
+            elif character_index is None:
+                if row[2] == "4" or row[2] == "5" or row[2] == "9":
+                    character_index = reader.line_num - 2
             if replace_underscore:
                 tags.append(row[1].replace("_", " "))
             else:
                 tags.append(row[1])
 
+    outputs = model.get_outputs()
+    print(outputs)
     label_name = model.get_outputs()[0].name
     probs = model.run([label_name], {input.name: image})[0]
 
